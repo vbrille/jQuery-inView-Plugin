@@ -1,5 +1,7 @@
 # jQuery-inView-Plugin
-A jQuery plugin that is designed to integrate with CSS transitions. Will determine if an element is within the viewport
+A jQuery plugin that is designed to integrate with CSS transitions. Will determine if an element is within the viewport.
+
+Based on inView.query.js by nox7
 
 ## HTML/CSS Only Usage
 Add the class _in-view-watcher_  or _in-view-watcher-once_ like shown below
@@ -13,6 +15,7 @@ Add the class _in-view-watcher_  or _in-view-watcher-once_ like shown below
 ```
 
 _in-view-watcher_ : When the element is in the viewport of the browser, the class _is-in-view_ will be added to the element by the plugin. This class will be removed when the element is no longer in the viewport.
+
 _in-view-watcher-once_ : When the element is in the viewport of the browser, the class _is-in-view_ will be added to the element by the plugin and will never be removed.
 
 You have to write some CSS to make sure to only perform your transition, or whatever changes you have in mind, when that class is there.
