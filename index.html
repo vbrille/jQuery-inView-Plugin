@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>jQuery inView Demo Page</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html,
+    body {
+      width: 100%;
+      /*overflow: hidden;*/
+    }
+    .section1 {
+      height: 100vh;
+      background: pink;
+    }
+    .section2 {
+      height: 100vh;
+      background: lightcoral;
+      position: relative;
+    }
+    h1 {
+      display: block;
+    }
+    .box1 {
+      position: absolute;
+      left: 50%;
+      top: 25%;
+      padding: 20px;
+      width: 250px;
+      background: lightblue;
+      transform: translateX(-50%);
+      border: 2px solid black;
+      transition: all 4s;
+      transition-delay: 0.5s;
+    }
+    .box1 span {
+      color: lightblue;
+    }
+    .box1.is-in-view {
+      background: darkblue;
+      color: #fff;
+    }
+    .box2 {
+      position: absolute;
+      left: 50%;
+      top: 75%;
+      padding: 20px;
+      width: 250px;
+      background: lightgreen;
+      transform: translateX(-50%);
+      border: 2px solid black;
+      transition: all 5s;
+      transition-delay: 2s;
+    }
+    .box2 span {
+      color: lightgreen;
+    }
+    .box2.is-in-view {
+      background: darkgreen;
+      color: #fff;
+    }
+  </style>
+  <body>
+    <div id="jquery-script-menu">
+      <a href="https://github.com/vbrille/jQuery-inView-Plugin">
+        Link to download This Plugin
+      </a>
+    </div>
+
+    <section class="section1">
+      <h1>jQuery inView Demo Page</h1>
+      <p>Scroll down to see the inView plugin working...</p>
+    </section>
+    <section class="section2">
+      <div class="box1 in-view-watcher">
+        Element 'in-view-watcher'<BR />
+        <span>I have the class is-in-view</span>
+      </div>
+      <div class="box2 in-view-watcher-once">
+        Element 'in-view-watcher-once'<BR />
+        <span>I have the class is-in-view</span>
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script src="inView.jquery-min.js"></script>
+  </body>
+</html>
