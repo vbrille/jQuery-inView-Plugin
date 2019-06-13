@@ -3,6 +3,11 @@ A jQuery plugin that is designed to integrate with CSS transitions. Will determi
 
 Based on inView.query.js by nox7
 
+## Updates
+13/06/2019: Just add the _rezise_ event to the _load_ and _scroll_ events to execute the _checkWatchedElements()_. Resizing the screen may change _is-inview_ elements but wat not taken into account.
+06/06/2019: Separate the _in-view-watcher_ from _in-view-watcher-once_ depending if we want to make transition (or whatever) only once or each time the element enter the viewport.
+			Add the _updateWatchedElements(delay)_ function to manully launch a refresh of elements (outise of a load, scroll or resize event).
+
 ## HTML/CSS Only Usage
 Add the class _in-view-watcher_  or _in-view-watcher-once_ like shown below
 ```html
@@ -64,7 +69,7 @@ $("#example").inViewWatcher().on("in-view", function(){
 
 ## jQuery Manual Function Execution Usage
 
-The plugin also adds a new jQuery function called _updateWatchedElements(delay)_ that can be executed to launch the plugin in case you need to refresh elements outside of an initial page load or scroll events. This function accept a delay as parameter.
+The plugin also adds a new jQuery function called _updateWatchedElements(delay)_ that can be executed to launch the plugin in case you need to refresh elements outside of an initial page load, scroll or resize events. This function accept a delay as parameter.
 
 
 ```javascript

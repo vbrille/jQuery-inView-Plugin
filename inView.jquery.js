@@ -62,6 +62,8 @@ Modifications:
       var leftOfElement = obj.offset().left;
       var rightOfElement = obj.offset().left + obj.width();
 
+      var totalMax = currentYScroll + clientHeight;
+
       if (
         // Check if the top of the element is in the viewport
         (topOfElement > currentYScroll &&
@@ -97,9 +99,10 @@ Modifications:
     watchedElements = newWatchedElementsList;
   }
 
-  // Register to the scroll event
-  $(window).on("scroll", checkWatchedElements);
-  $(window).on("load", checkWatchedElements);
+  // Register to the load scroll and resize events
+  $(window).bind("load scroll resize", function() {
+    checkWatchedElements();
+  });
   // Run the function once to see if the plugin needs to add the class to any currently viewable elements before a scroll event
   checkWatchedElements();
 })(jQuery);
